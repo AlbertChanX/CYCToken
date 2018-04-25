@@ -22,19 +22,23 @@ truffle migrate --network development // check it in truffle.js
 4. interact with Contract in console
 ```
 truffle console --network development
-```
-`get account from ganache-cli`
-```
+
+# get account from ganache-cli
 account0 = web3.eth.accounts[0]
+
 # call contract
+
 CYCToken.deployed().then(inst => { CYCToken = inst })
 
 CYCTokenInstance.totalSupply.call()
 ```
+
 5. deploy contract in `ropsten`
+
 ```
 truffle migrate --network ropsten
 ```
+
 runing result:
 ```
   Deploying Migrations...
@@ -54,7 +58,7 @@ Saving successful migration to network...
   ... 0xd986b491a933c7763745ee5a1167e7c5773b0ffad2738a6e2c03d826b2f8b1b7
 ``` 
 
-** view contract in [here](https://ropsten.etherscan.io/address/0xf00835a4f7d4afa449687f6254e209e1238eaf19)
+* view contract in [here](https://ropsten.etherscan.io/address/0xf00835a4f7d4afa449687f6254e209e1238eaf19)
 
 ## Refer
 1. [EIP-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
