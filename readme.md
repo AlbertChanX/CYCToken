@@ -5,6 +5,9 @@
 ```
 npm install -g truffle
 npm install -g ganache
+
+npm init -y
+npm install -E zeppelin-solidity
 ```
 
 2. create project in a empty folder
@@ -20,15 +23,15 @@ truffle migrate --network development // check it in truffle.js
 ```
 
 4. interact with Contract in console
+
 ```
 truffle console --network development
 
-# get account from ganache-cli
+// get account from ganache-cli
 account0 = web3.eth.accounts[0]
 
-# call contract
-
-CYCToken.deployed().then(inst => { CYCToken = inst })
+// call contract
+CYCToken.deployed().then(inst => { CYCTokenInstance = inst })
 
 CYCTokenInstance.totalSupply.call()
 ```
@@ -39,26 +42,14 @@ CYCTokenInstance.totalSupply.call()
 truffle migrate --network ropsten
 ```
 
-runing result:
+* runing result:
 ```
-  Deploying Migrations...
-  ... 0x3a54eef24a98431a9752b4872b7ab20ffad4f94dd1ed165bdd8b01e6a42e91a8
-
-
-  Migrations: 0x58c59e5161bf366890cb04e5466bbe15fdff5d38
-Saving successful migration to network...
-
-  ... 0xe2aabf83510d45506a4ee19a4484eb8e173bce7becae0ef068a59ec5ca8e88e0
-
-Running migration: 2_deploy_contract..js
-  Deploying CYCToken...
-  ... 0x18cb419a716de367e124ae677f7a600ecad50dbb87ee402045d3cd0f29d5609c
-  CYCToken: 0xf00835a4f7d4afa449687f6254e209e1238eaf19
-Saving successful migration to network...
-  ... 0xd986b491a933c7763745ee5a1167e7c5773b0ffad2738a6e2c03d826b2f8b1b7
+Deploying CYCToken...
+  ... 0x2d04ff6f016a8e03f8c3f662f5a73b6ca94bfa4d95c0055b847cd8ed453f363e
+  CYCToken: 0xd797d0b277e2f3b01c123ceef78180b6ea643fc2
 ``` 
 
-* view contract in [here](https://ropsten.etherscan.io/address/0xf00835a4f7d4afa449687f6254e209e1238eaf19)
+* view contract in [here](https://ropsten.etherscan.io/token/0xd797d0b277e2f3b01c123ceef78180b6ea643fc2)
 
 ## Refer
 1. [EIP-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
@@ -67,5 +58,5 @@ Saving successful migration to network...
 4. [**DongriToken**](https://github.com/dongri/DongriToken)
 5. [**ERC20**](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/token/ERC20)
 6. [**OurToken**](https://github.com/Kubide/solidity-Boilerplate/blob/master/contracts/OurToken.sol)
-
+[Awesome Crowdsales](https://github.com/rstormsf/awesome-crowdsales)
 [provider](https://www.npmjs.com/package/truffle-wallet-provider)

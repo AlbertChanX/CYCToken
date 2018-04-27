@@ -1,0 +1,25 @@
+{
+  "name": "CYCToken",
+  "version": "1.0.0",
+  "description": "1. install  ``` npm install -g truffle npm install -g ganache ```",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider-privkey": "^0.2.0",
+    "web3": "^1.0.0-beta.34",
+    "zeppelin-solidity": "1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://120.78.185.128:3010/cyc/CYCToken.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
