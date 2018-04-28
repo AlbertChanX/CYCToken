@@ -1,6 +1,7 @@
 // https://github.com/halls7588/ERC20-Token-and-ICO-Contract/blob/master/Lavevel-Token.sol
 // http://truffleframework.com/docs/getting_started/migrations
-var CYCToken = artifacts.require("./CYCToken.sol");
+// CYCToken/ .sol
+var CYCToken = artifacts.require("CYCToken");
 
 module.exports = function(deployer) {
   // let initialSupply = 21000000e18 // 2100,0000

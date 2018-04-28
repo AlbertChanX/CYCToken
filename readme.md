@@ -8,7 +8,11 @@ npm install -g ganache
 
 npm init -y
 npm install -E zeppelin-solidity
+
+// npm update -g truffle
 ```
+(&#x1F34E;) npm install  openzeppelin-solidity
+:star: openzeppelin-solidity@1.9.0
 
 2. create project in a empty folder
 ```
@@ -49,7 +53,15 @@ Deploying CYCToken...
   CYCToken: 0xd797d0b277e2f3b01c123ceef78180b6ea643fc2
 ``` 
 
-* view contract in [here](https://ropsten.etherscan.io/token/0xd797d0b277e2f3b01c123ceef78180b6ea643fc2)
+* :tada:view contract in [here](https://ropsten.etherscan.io/token/0xd797d0b277e2f3b01c123ceef78180b6ea643fc2)
+
+## Warning to be fixed
+when compile sol
+```
+Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function CYCToken() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+```
 
 ## Refer
 1. [EIP-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
@@ -60,3 +72,4 @@ Deploying CYCToken...
 6. [**OurToken**](https://github.com/Kubide/solidity-Boilerplate/blob/master/contracts/OurToken.sol)
 [Awesome Crowdsales](https://github.com/rstormsf/awesome-crowdsales)
 [provider](https://www.npmjs.com/package/truffle-wallet-provider)
+[smart contract](https://www.jianshu.com/c/4d3800411cfa)
