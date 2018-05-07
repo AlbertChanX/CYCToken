@@ -38,6 +38,8 @@ account0 = web3.eth.accounts[0]
 CYCToken.deployed().then(inst => { CYCTokenInstance = inst })
 
 CYCTokenInstance.totalSupply.call()
+// event
+CYCTokenInstance.Transfer.call()
 ```
 
 5. deploy contract in `ropsten`
@@ -70,6 +72,9 @@ Warning: Defining constructors as functions with the same name as the contract i
 4. [**DongriToken**](https://github.com/dongri/DongriToken)
 5. [**ERC20**](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/token/ERC20)
 6. [**OurToken**](https://github.com/Kubide/solidity-Boilerplate/blob/master/contracts/OurToken.sol)
-[Awesome Crowdsales](https://github.com/rstormsf/awesome-crowdsales)
-[provider](https://www.npmjs.com/package/truffle-wallet-provider)
-[smart contract](https://www.jianshu.com/c/4d3800411cfa)
+
+7. [Awesome Crowdsales](https://github.com/rstormsf/awesome-crowdsales)
+8. [provider](https://www.npmjs.com/package/truffle-wallet-provider)
+9. [smart contract](https://www.jianshu.com/c/4d3800411cfa)
+
+10. [Kubide/solidity-Boilerplate: `A basic Solidity` - Truffle - OpenZeppelin - Infura Boilerplate](https://github.com/Kubide/solidity-Boilerplate)

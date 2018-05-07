@@ -2,13 +2,14 @@ const Web3 = require("web3");
 const web3 = new Web3();
 // local account
 const HDWalletProvider = require("truffle-hdwallet-provider-privkey");
-const privKey = Buffer.from("FC6AA280B7FB004F3FA52715415E0E216EE085FF1C273D3499D0F72D822BEE3D", 'hex'); // raw private key
+var pass = require('fs').readFileSync('./password').toString();
+const privKey = Buffer.from(pass, 'hex'); // raw private key
 // var keystore = require('fs').readFileSync('./keystore').toString();
-// // var pass = require('fs').readFileSync('./pass').toString();
 // var wallet = require('ethereumjs-wallet').fromV3(keystore, '123456');
 
-// var privKey = new Buffer("FC6AA280B7FB004F3FA52715415E0E216EE085FF1C273D3499D0F72D822BEE3D", 'hex'); // raw private key
-const ETH_NODE = "https://ropsten.infura.io/oHXBBObmi52OGTiLIa6J";
+// var privKey = new Buffer("pk", 'hex'); // raw private key
+// repalce 'xx' with api key 
+const ETH_NODE = "https://ropsten.infura.io/xx";
 const fromAddress = "0xed147cc91c1c3522c47028738b0df3b6f2c1409c"
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
