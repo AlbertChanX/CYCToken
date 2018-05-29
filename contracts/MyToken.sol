@@ -1,8 +1,8 @@
 pragma solidity ^0.4.21;
 
-import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
+import 'openzeppelin-solidity/contracts/token/ERC20/PausableToken.sol';
  
-contract MyToken is StandardToken {
+contract MyToken is PausableToken {
 
     string public name;
     string public symbol;
@@ -30,7 +30,8 @@ contract MyToken is StandardToken {
 //        return true;
 //      }
 
-    function transferMultiple(address[] _tos, uint256[] _values)  public returns (bool) {
+    function transferMultiple(address[] _tos, uint256[] _values)  public 
+    whenNotPaused returns (bool) {
         require(_tos.length == _values.length);
         uint256 total = 0;
 
