@@ -65,6 +65,13 @@ Warning: Defining constructors as functions with the same name as the contract i
   ^ (Relevant source part starts here and spans across multiple lines).
 ```
 
+## solidity_flattener 
+
+[truffle-flattener:](https://github.com/alcuadrado/truffle-flattener)
+```
+truffle-flattener <*.sol> >> <new.sol>
+```
+
 ## Refer
 1. [EIP-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
 2. [truffle](http://www.cocoachina.com/blockchain/20180314/22592.html)
