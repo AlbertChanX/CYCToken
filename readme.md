@@ -4,7 +4,7 @@
 1. install 
 ```
 npm install -g truffle
-npm install -g ganache
+npm install -g ganache-cli
 
 npm init -y
 npm install -E zeppelin-solidity
@@ -38,8 +38,15 @@ account0 = web3.eth.accounts[0]
 CYCToken.deployed().then(inst => { CYCTokenInstance = inst })
 
 CYCTokenInstance.totalSupply.call()
+
+// or like this
+CYCToken.at(CYCToken.address).name.call()
+
 // event
 CYCTokenInstance.Transfer.call()
+
+//func
+CYCTokenInstance.transfer('0x', 100)
 ```
 
 5. deploy contract in `ropsten`
